@@ -15,6 +15,7 @@ OAuth 2.0 is an *authorization* protocol that allows a party (like your Node app
 to access resources from another party (like Google).
 
 The basic OAuth workflow is:
+
 1. Client requests a resource from Third Party.
 2. Server redirects Client to the Third Party to get confirmation that this request is valid.
 3. Client says OK.
