@@ -7,4 +7,4 @@ node_modules
 .DS_Store
 
 # Config
-auth.js
+config/auth.js
