@@ -59,7 +59,7 @@ passport.use('google', new GoogleStrategy({
         profile.emails[0].value, /* we take first email address */
         function (err, user) {
           if (err) {
-            throw err;
+            return done(err);
           }
 
           return done(null, user);
