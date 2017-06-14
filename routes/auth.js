@@ -51,7 +51,8 @@ router.get('/google/callback', passport.authenticate('google',
  */
 router.get('/', function (req, res) {
   if (req.isAuthenticated()) {
-    res.json({ status: true, name: req.user.googleName });
+    console.log(req.user);
+    res.json({ status: true, name: req.user.googleName, email: req.user.googleEmail });
   } else {
     res.json({ status: false });
   }

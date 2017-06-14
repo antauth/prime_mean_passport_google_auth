@@ -1,37 +1,68 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Google Server-Side Auth Example</title>
-    <script src="/public/vendors/angular.min.js"></script>
-    <script src="/public/vendors/angular-route.min.js"></script>
-    <script src="/public/scripts/app.js"></script>
-    <script src="/public/scripts/services/authFactory.js"></script>
-    <script src="/public/scripts/controllers/navController.js"></script>
-    <script src="/public/scripts/controllers/authController.js"></script>
-    <script src="/public/scripts/controllers/calendarController.js"></script>
-    <link rel="stylesheet" type="text/css" href="/public/vendors/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="/public/vendors/skeleton.css" />
-  </head>
-  <body>
-    <!-- Bring in the Angular app -->
-    <main class="container" ng-app="theGoogles">
-      <!-- NavController is on every page -->
-      <header ng-controller="NavController as nav">
-        <h1>How can I get my Google Calender???</h1>
-        <nav>
-          <ul class="row">
-            <li class="two columns"><a href="#home">Home</a></li>
-            <li class="two columns"><a href="#calendar">Calendar</a></li>
-            <li class="six columns" ng-show="nav.displayLogout">Hi {{nav.username}}! | <a href="#" ng-click="nav.logout()">Logout</a></li>
-          </ul>
-        </nav>
-        <!-- Show a helpful message when needed -->
-        <section id="message" class="nav.message.type" ng-show="nav.message.text">
-          {{nav.message.text}}
-        </section>
-      </header>
-      <!-- Pull in views via ngRoutes here -->
-      <ng-view></ng-view>
-    </main>
-  </body>
+<head>
+  <title>West Tonka</title>
+  <script src="/public/vendors/angular.min.js"></script>
+  <script src="/public/vendors/angular-route.min.js"></script>
+  <script src="/public/scripts/app.js"></script>
+  <script src="/public/scripts/services/authFactory.js"></script>
+  <script src="/public/scripts/controllers/navController.js"></script>
+  <script src="/public/scripts/controllers/authController.js"></script>
+  <script src="/public/scripts/controllers/calendarController.js"></script>
+  <link rel="stylesheet" type="text/css" href="/public/vendors/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="/public/vendors/skeleton.css" />
+  <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/styles/style.css">
+  <link rel="icon" href="https://img1.etsystatic.com/107/0/10005631/il_340x270.1057063293_2ov2.jpg" type="image/png">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono|Sigmar+One" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css"></script>
+  <script src=https://cdn.jsdelivr.net/sweetalert/1.1.3/sweetalert.css></script>
+  <link rel="stylesheet" href="vendors/angular-material.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js">
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+  <script src="vendors/angular-material.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="vendors/angular-route.min.js"></script>
+
+  <script src="vendors/angular-animate.js" charset="utf-8"></script>
+  <script src="vendors/angular-aria.min.js" charset="utf-8"></script>
+  <script src="vendors/angular-messages.min.js" charset="utf-8"></script>
+
+  <script src="vendors/angular-material-icons.min.js" charset="utf-8"></script>
+
+
+
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+
+  <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyA5M3nUZqGt_OJtK_DUsJqEJMuuxcZ4na0"></script>
+  <script src="vendors/ng-map.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/scripts/clientapp.js"></script>
+  <script src="assets/scripts/services/service.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/scripts/newController.js"></script>
+  <script type="text/javascript" src="/assets/scripts/controllers/login.controller.js"></script>
+  <script type="text/javascript" src="/assets/scripts/controllers/user.controller.js"></script>
+</head>
+<body>
+  <main class="container" ng-app="theGoogles">
+
+      <nav>
+        <ul class="row">
+          <li class="two columns"><a href="#home">Home</a></li>
+          <li class="two columns"><a href="#calendar">Calendar</a></li>
+          <li class="six columns" ng-show="nav.displayLogout">Hi {{nav.username}}! | <a href="#" ng-click="nav.logout()">Logout</a></li>
+        </ul>
+      </nav>
+      <!-- Show a helpful message when needed -->
+      <section id="message" class="nav.message.type" ng-show="nav.message.text">
+        {{nav.message.text}}
+      </section>
+    </header>
+    <!-- Pull in views via ngRoutes here -->
+    <ng-view></ng-view>
+  </main>
+</body>
 </html>
