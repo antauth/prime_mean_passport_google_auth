@@ -14,7 +14,7 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth2').Strategy;
 /** ---------- REQUIRE CUSTOM APP MODULES ---------- **/
-var config = require('../config/auth');
+var config = require('../config/auth.js');
 
 // all db queries moved to a service layer, necessary for proper unit testing
 var UserService = require('../services/user');
